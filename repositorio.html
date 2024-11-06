@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Experto</title>
+    <link rel="website icon" type="brand"
+    href="img/copo.jpeg">
+    <link rel="stylesheet" href="repositorio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobrenostrso.html">Sobre Nosotros</a></li>
+                <li><a href="desarrollo.html">Desarrollo</a></li>
+                <li><a href="repositorio.html">Repositorio</a></li>
+                <li><a href="Documento.html">Documento</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de GitHub</title>
+    <style>
+       @font-face {
+        font-family: 'fuentepy' ;
+        src: url(./Fuentes/AppleGaramond-Italic.ttf);
+       }
+        h1 {
+            color: #333;
+            text-align: center;
+            font-family: 'fuentepy';
+        }
+        #repositorio-lista {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #repositorio-lista li {
+            background-color: #fff;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        #repositorio-lista li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        #repositorio-lista li a:hover {
+            text-decoration: underline;
+        }
+        #previsualizacion {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Repositorio de GitHub</h1>
+    <ul id="repositorio-lista"></ul>
+
+    <div id="previsualizacion">
+        <h2>Previsualización de archivo</h2>
+        <pre id="contenido-archivo"></pre>
+    </div>
+
+    <script>
+        async function obtenerArchivosRepositorio() {
+            const usuario = "stevne25519859"; // Reemplaza con tu usuario
+            const repositorio = "repositorio-de-sistemas-experto"; // Reemplaza con el nombre de tu repositorio
+            const url = `https://api.github.com/repos/${usuario}/${repositorio}/contents`;
+
+            try {
+                const respuesta = await fetch(url);
+                const datos = await respuesta.json();
+                
+                const lista = document.getElementById("repositorio-lista");
+                lista.innerHTML = ""; // Limpiar lista
+
+                datos.forEach(archivo => {
+                    const elemento = document.createElement("li");
+                    const enlace = document.createElement("a");
+                    enlace.href = archivo.html_url;
+                    enlace.textContent = archivo.name;
+                    enlace.onclick = (e) => {
+                        e.preventDefault();
+                        previsualizarArchivo(archivo);
+                    };
+                    elemento.appendChild(enlace);
+                    lista.appendChild(elemento);
+                });
+            } catch (error) {
+                console.error("Error al obtener los archivos:", error);
+            }
+        }
+
+        async function previsualizarArchivo(archivo) {
+            if (!archivo.download_url) {
+                window.open(archivo.html_url, "_blank");
+                return;
+            }
+            try {
+                const respuesta = await fetch(archivo.download_url);
+                const contenido = await respuesta.text();
+                document.getElementById("contenido-archivo").textContent = contenido;
+                document.getElementById("previsualizacion").style.display = "block";
+            } catch (error) {
+                console.error("Error al cargar el archivo:", error);
+            }
+        }
+
+        obtenerArchivosRepositorio();
+    </script>
+</body>
+</html>
+
+
+    
+</body>
+</html>

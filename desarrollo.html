@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Experto</title>
+    <link rel="website icon" type="brand"
+    href="img/copo.jpeg">
+    <link rel="stylesheet" href="desarrollo.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobrenostrso.html">Sobre Nosotros</a></li>
+                <li><a href="desarrollo.html">Desarrollo</a></li>
+                <li><a href="repositorio.html">Repositorio</a></li>
+                <li><a href="Documento.html">Documento</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div>
+        <h1>Este apartado es donde explicaremos cómo se realizó paso a paso el documento y el sistema experto</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+
+            <img class="img" src="Img/img de desarrollo/img python.jpg" alt="imagen de python" >
+        </div>
+        <div class="card-2">
+            <img class="img" src="Img/img de desarrollo/img de html.jpg" alt="imagen de html">
+        </div>
+        <div class="card-3">
+            <img class="imgg" src="Img/img de desarrollo/img de css.jpg" alt="imagen de css">
+        </div>
+    </div>
+    <div class="despython">
+        <div>
+            <img class="imgpython" src="Img/img de desarrollo/img python.jpg" alt="imagen de python">
+        </div>
+        <div>
+            <h1> Anexo unos curso que utilize para saber este tipo de lenguaje de progrmacion <br><a href="https://www.sololearn.com/es/learn/courses/python-developer" target="_blank" style="text-decoration: none;" > link de acceso del curso totalmente gratuito</a> </h1>
+            <button  class="accordion">¿Qué es Python?</button>
+            <div class="panel">
+             <p>Python es un lenguaje de programación de alto nivel, conocido por su simplicidad y versatilidad.</p>
+           </div>
+        </div>
+    </div>
+    <div class="deshtml">
+        <div>
+            
+            <h1>Anexo el curso que utilize para saber este tipo de lenguaje de programación <br><a href="https://www.sololearn.com/es/learn/courses/python-developer" target="_blank" style="text-decoration: none;" > link de acceso del curso totalmente gratuito</a> </h1>
+            <button class="accordion">¿Qué es HTML?</button>
+            <div class="panel">
+                <p>HTML es el lenguaje de marcado estándar para crear páginas web y estructurar su contenido.</p>
+            </div>                  
+        </div>
+        <div>
+            <img class="imghtml" src="Img/img de desarrollo/img de html.jpg" alt="imgen de html">
+             
+        </div>
+    </div>
+    <div class="descss">
+        <div>
+            <img class="imgcss" src="Img/img de desarrollo/img de css.jpg" alt="imagen de css">
+        </div>
+        <div>
+            <h1> Anexo el curso que utilize para saber este tipo de lenguaje de programación <br><a href="https://www.sololearn.com/es/learn/courses/python-developer" target="_blank" style="text-decoration: none;" > link de acceso del curso totalmente gratuito</a></h1>
+            <button class="accordion">¿Qué es CSS?</button>
+            <div class="panel">
+                <p>CSS se utiliza para describir la presentación de un documento HTML, permitiendo estilizar elementos de forma efectiva.</p>
+            </div>
+        </div>
+        <script>
+        const accordion = document.querySelectorAll(".accordion");
+
+     accordion.forEach(accordion => {
+    accordion.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+});
+        </script>
+    </div>
+    <div class="documento">
+        <div class="bloque">
+
+            <img class="imgen" src="Img/img de documento/word.png" alt="imagen de word" >
+        </div>
+        <div class="bloque-2">
+            <img class="imgen" src="Img/img de documento/logotipo-microsoft-excel- (1).png" alt="imagen excel">
+        </div>
+        <div class="bloque-3">
+            <img class="imggen" src="Img/img de documento/images.png" alt="imagen de uml star">
+        </div>
+    </div>
+    <div class="desword">
+        <div>
+            
+            <h1>Anexo el curso que utilize para saber usar Word <br><a href="https://aprendomas.cuaed.unam.mx/" target="_blank" style="text-decoration: none;" > link de acceso del curso totalmente gratuito</a> </h1>
+            <button class="accordions">¿Qué es Word?</button>
+            <div class="panels">
+                <p>El procesador de textos Microsoft Word es una herramienta integrada en el paquete Microsoft Office. Su función es la creación y edición de archivos de texto.</p>
+            </div>                  
+        </div>
+        <div>
+            <img class="imgword" src="Img/img de documento/word.png" alt="imgen de html">
+             
+        </div>
+    </div>
+    <div class="despexcel">
+        <div>
+            <img class="imgexcel" src="Img/img de documento/logotipo-microsoft-excel- (1).png" alt="imagen de python">
+        </div>
+        <div>
+            <h1> Anexo unos curso que utilize para saber Excel <br><a href="https://www.udemy.com/course/excelin60/?ranMID=39197&ranEAID=d2gvurItCFk&ranSiteID=d2gvurItCFk-JvSoQOOMbuhdGBlD3jtsqg&LSNPUBID=d2gvurItCFk&utm_source=aff-campaign&utm_medium=udemyads" target="_blank" style="text-decoration: none;" > link de acceso del curso totalmente gratuito</a> </h1>
+            <button  class="accordions">¿Qué es Excel?</button>
+            <div class="panels">
+             <p>Excel es una herramienta muy eficaz para obtener información con significado a partir de grandes cantidades de datos. También funciona muy bien con cálculos sencillos y para realizar el seguimiento de casi cualquier tipo de información.</p>
+           </div>
+        </div>
+    </div>
+    <div class="desstar">
+        <div>
+            
+            <h1>Anexo el curso que utilize para saber Star Uml <br><a href="https://www.youtube.com/watch?v=4wX4RgqR2Xs&list=PLnpr13oHoA7bFp0lQA8koipz_Ie-WZtrh" target="_blank" style="text-decoration: none;" > link de acceso del curso totalmente gratuito</a> </h1>
+            <button class="accordions">¿Qué es Star UMl?</button>
+            <div class="panels">
+                <p>La herramienta StarUML nos permite generar algo de código (los nombres de los atributos y las signaturas de los métodos) a partir de las clases definidas.</p>
+            </div>                  
+        </div>
+        <div>
+            <img class="imgstar" src="Img/img de documento/images.png" alt="imgen de html">
+             
+        </div>
+    </div>
+    <div>
+        <footer class="pie">
+            <h1> ©pagina web de 2024 </h1>
+        </footer>
+    </div>
+    <script>
+        const accordions = document.querySelectorAll(".accordions");
+
+     accordions.forEach(accordion => {
+    accordion.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+});
+        </script>
+  
+
+    
+</body>

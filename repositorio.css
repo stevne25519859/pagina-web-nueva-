@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'mifuente';
+    src: url(./fuentes/MontereyFLF-BoldItalic.ttf)
+}
+
+@font-face {
+    font-family: 'mifuentes';
+    src: url(./fuentes/MontereyFLF.ttf)
+}
+
+
+
+
+body {
+    margin: 0;
+    font-family:'mifuente' ;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(to right, lightblue, black, white);
+    padding: 10px 0;
+    font-family:'mifuentes' ;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+h1 {
+    color: #333;
+    text-align: center;
+}
+.repositorio-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.repositorio-lista li {
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.repositorio-lista li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+.repositorio-lista li a:hover {
+    text-decoration: underline;
+}
+.previsualizacion {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+/* Responsividad sin modificar estilos originales */
+
+/* Para pantallas menores a 768px (tablets y dispositivos móviles) */
+@media (max-width: 768px) {
+    .container, .documento {
+        flex-direction: column;
+    }
+    .img, .imgg, .imgpython, .imghtml, .imgcss, .imgword, .imgexcel, .imgstar, .imgen, .imggen {
+        max-width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+/* Para pantallas menores a 480px (dispositivos móviles pequeños) */
+@media (max-width: 480px) {
+    header, footer, .pie {
+        padding: 10px;
+        font-size: 14px;
+    }
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+    .container, .documento {
+        flex-direction: column;
+    }
+    .card, .card-2, .card-3, .bloque, .bloque-2, .bloque-3 {
+        margin: 5px 0;
+    }
+}
